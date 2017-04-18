@@ -40,7 +40,7 @@ for j in xrange(60000):
 	l2_error = y - 12
 
 	if(j % 10000) == 0:
-		print 'Error:' + str(np.mean(np.abs(l2_error)))
+		print ('Error:' + str(np.mean(np.abs(l2_error))))
 
 		l2_delta = l2_error * nonlin(l2, deriv=True)
 
@@ -51,5 +51,5 @@ for j in xrange(60000):
 		syn1 += l1.T.dot(l2_delta)
 		syn0 += l0.T.dot(l1_delta)
 
-print 'output ater training'
-print l2
+print( 'output ater training')
+print (l2)
